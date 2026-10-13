@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>稚内市開基百年記念塔・稚内市北方記念館</title>
+<meta name="description" content="地上80m、海抜約250m。稚内公園の丘に立つ記念塔から、利尻・礼文、そしてサハリンまで360度のパノラマを。塔内の北方記念館では稚内と樺太の歴史を学べます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#101b27;
+  --sea:#2c4a52;
+  --paper:#e8dfcb;
+  --paper-deep:#dccfb4;
+  --brass:#a98648;
+  --text:#221d16;
+  --serif:"Shippori Mincho","Yu Mincho","Hiragino Mincho ProN","MS PMincho",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--serif);color:var(--text);background:var(--paper);line-height:2;font-size:17px;letter-spacing:.04em}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+.photo{background:var(--sea)}
+.photo img{width:100%;height:100%;object-fit:cover;filter:sepia(.35) saturate(.85) contrast(1.02)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;color:#f3ead6;overflow:hidden;background:var(--ink)}
+.hero .photo{position:absolute;inset:0}
+.hero .photo img{opacity:.78}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,27,39,.82) 0%,rgba(16,27,39,.35) 55%,rgba(16,27,39,.55) 100%)}
+.hero-inner{position:relative;z-index:1;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:space-between;padding:6vh 7vw;gap:4vw}
+.hero-title{writing-mode:vertical-rl;font-weight:500;font-size:clamp(30px,5.2vw,62px);line-height:1.5;letter-spacing:.28em;text-shadow:0 2px 24px rgba(0,0,0,.45);animation:rise 1.8s ease-out both}
+.hero-title span{display:block}
+.hero-sub{writing-mode:vertical-rl;font-size:clamp(14px,1.6vw,18px);letter-spacing:.3em;color:#d8c9a4;border-left:1px solid var(--brass);padding-left:1.4em;animation:rise 1.8s .5s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero-title,.hero-sub{animation:none}}
+
+/* shared */
+.wrap{max-width:1040px;margin:0 auto;padding:0 6vw}
+section{padding:110px 0}
+h2{font-weight:500;font-size:clamp(24px,3.4vw,36px);line-height:1.6;letter-spacing:.12em;margin-bottom:1.2em}
+h2::after{content:"";display:block;width:56px;height:1px;background:var(--brass);margin-top:.9em}
+p+p{margin-top:1.4em}
+
+/* split sections */
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.split.rev{grid-template-columns:1fr 1.05fr}
+.split.rev .photo{order:2}
+.frame{padding:12px;background:#f3ecdb;box-shadow:0 18px 40px rgba(34,29,22,.28)}
+.frame .photo{aspect-ratio:4/5}
+.frame .photo img{height:100%}
+
+.dark{background:var(--ink);color:#e9dfc8}
+.dark h2::after{background:var(--brass)}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.review{border-top:1px solid var(--brass);padding-top:1.6em}
+.stars{color:var(--brass);letter-spacing:.2em;font-size:18px}
+.review p{font-size:15.5px;margin-top:.8em}
+
+/* info */
+.info{background:var(--paper-deep)}
+dl{display:grid;grid-template-columns:9em 1fr;border-top:1px solid rgba(34,29,22,.35)}
+dt,dd{padding:1.1em 0;border-bottom:1px solid rgba(34,29,22,.35)}
+dt{font-weight:700;letter-spacing:.15em}
+dd a{text-decoration-color:var(--brass);text-underline-offset:4px}
+
+/* map */
+.map{border:1px solid var(--brass);padding:10px;background:#f3ecdb}
+.map iframe{width:100%;height:420px;border:0;display:block;filter:sepia(.25)}
+.btn-row{margin-top:28px}
+.btn{display:inline-block;padding:1em 2.6em;background:var(--ink);color:#f3ead6;text-decoration:none;letter-spacing:.2em;border:1px solid var(--ink);transition:background .25s,color .25s}
+.btn:hover{background:transparent;color:var(--ink)}
+
+/* footer */
+footer{background:var(--ink);color:#cfc2a0;padding:70px 0 50px;text-align:left}
+.foot{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:center}
+.foot .name{font-size:19px;letter-spacing:.14em;color:#efe5cc}
+.sns a{display:inline-flex;width:48px;height:48px;border:1px solid var(--brass);align-items:center;justify-content:center;color:#efe5cc;transition:background .25s}
+.sns a:hover{background:var(--brass);color:var(--ink)}
+.sns svg{width:20px;height:20px;fill:currentColor}
+.copy{margin-top:40px;font-size:13px;letter-spacing:.1em;color:#9d9378}
+
+@media (max-width:760px){
+  body{font-size:16px}
+  section{padding:76px 0}
+  .split,.split.rev,.reviews{grid-template-columns:1fr;gap:36px}
+  .split.rev .photo{order:0}
+  .hero-inner{padding:8vh 8vw}
+  dl{grid-template-columns:1fr}
+  dt{border-bottom:0;padding-bottom:0}
+  dd{padding-top:.2em}
+  .map iframe{height:320px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="photo"><img src="images/image1.jpg" alt="稚内公園の丘に立つ稚内市開基百年記念塔"></div>
+  <div class="hero-inner">
+    <h1 class="hero-title"><span>北の果てを、</span><span>百年のまなざしで。</span></h1>
+    <p class="hero-sub">稚内市開基百年記念塔・稚内市北方記念館</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap split">
+    <div class="frame"><div class="photo"><img src="images/image2.jpg" alt="記念塔の展望室から望むパノラマ"></div></div>
+    <div>
+      <h2>地上80m、海抜約250m。<br>三百六十度の眺望。</h2>
+      <p>稚内公園の丘にそびえる記念塔の展望台からは、稚内の街並みと宗谷岬、利尻島、礼文島まで見渡せます。空気の澄んだ日には、遠くサハリンの島影を望むこともできます。</p>
+      <p>宗谷に役場がおかれた1879年を稚内の始まりとし、開基百年を記念して1978年に建てられた塔です。</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap split rev">
+    <div class="frame"><div class="photo"><img src="images/image3.jpg" alt="稚内市北方記念館の展示"></div></div>
+    <div>
+      <h2>塔の中で、<br>北方の歴史にふれる。</h2>
+      <p>塔内は稚内市北方記念館になっています。この地域の先史時代から、伊能忠敬・間宮林蔵による北海道・樺太の地形調査、樺太と日本のつながりまで、北の歴史を順にたどれます。</p>
+      <p>戦前の写真や説明パネルも充実しています。展望台と思って訪れて、展示の濃さに驚く方も少なくありません。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>訪れた方の声</h2>
+    <div class="reviews">
+      <article class="review">
+        <div class="stars" aria-label="5段階評価の5">★★★★★</div>
+        <p>稚内市街から宗谷岬、利尻島、礼文島、遠くサハリンまで見渡せる展望塔です。当日は快晴で、サハリンもはっきり見えました。展望台のつもりで寄ったところ、1〜2階の資料館は思いのほか立派で、とても濃い内容でした。</p>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5段階評価の4">★★★★</div>
+        <p>塔内では、稚内の先史からの歴史、伊能忠敬・間宮林蔵の調査、樺太と日本の関係などを学べます。戦前の写真や説明パネルも充実していました。車がない場合は、タクシーで上がり、帰りは遊歩道を歩いて下るのがおすすめです。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="info">
+  <div class="wrap">
+    <h2>ご案内</h2>
+    <dl>
+      <dt>施設名</dt><dd>稚内市開基百年記念塔・稚内市北方記念館</dd>
+      <dt>入館料</dt><dd>400円</dd>
+      <dt>定休日</dt><dd>毎週月曜日（祝祭日の場合は翌日）<br>6月1日〜9月30日は無休</dd>
+      <dt>住所</dt><dd>北海道稚内市稚内村ヤムワッカナイ</dd>
+      <dt>電話番号</dt><dd><a href="tel:0162244019">0162-24-4019</a></dd>
+      <dt>お問い合わせ</dt><dd><a href="https://w-shinko.co.jp/hoppo-kinenkan/inquiry" target="_blank" rel="noopener">お問い合わせフォーム</a></dd>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>アクセス</h2>
+    <div class="map">
+      <iframe title="稚内市開基百年記念塔の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=%E7%A8%9A%E5%86%85%E5%B8%82%E9%96%8B%E5%9F%BA%E7%99%BE%E5%B9%B4%E8%A8%98%E5%BF%B5%E5%A1%94&output=embed&hl=ja"></iframe>
+    </div>
+    <div class="btn-row">
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E7%A8%9A%E5%86%85%E5%B8%82%E9%96%8B%E5%9F%BA%E7%99%BE%E5%B9%B4%E8%A8%98%E5%BF%B5%E5%A1%94" target="_blank" rel="noopener">地図を開く</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="name">稚内市開基百年記念塔・稚内市北方記念館</div>
+      <div class="sns">
+        <a href="https://x.com/hoppoukinenkan" target="_blank" rel="noopener" aria-label="X（旧Twitter）">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="copy">&copy; 稚内市開基百年記念塔・稚内市北方記念館</p>
+  </div>
+</footer>
+
+</body>
+</html>
